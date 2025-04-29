@@ -58,20 +58,18 @@ const StatsSidebar = ({ selectedParcels, selectedZoningType, isMobile }) => {
           title="Expand statistics panel"
         >
           <FiBarChart2 className="text-violet-700 mb-2 w-6 h-6" />
-          <div className="vertical-text text-violet-700 font-medium tracking-wide">
+          <div
+            className="text-violet-700 font-medium tracking-wide"
+            style={{
+              writingMode: "vertical-rl",
+              textOrientation: "mixed",
+              transform: "rotate(180deg)",
+              letterSpacing: "1px",
+            }}
+          >
             STATISTICS
           </div>
           <FiChevronLeft className="mt-2 text-violet-700" />
-
-          {/* Add some CSS for vertical text */}
-          <style jsx>{`
-            .vertical-text {
-              writing-mode: vertical-rl;
-              text-orientation: mixed;
-              transform: rotate(180deg);
-              letter-spacing: 1px;
-            }
-          `}</style>
         </div>
       )}
 

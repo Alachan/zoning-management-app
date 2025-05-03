@@ -24,3 +24,5 @@ frontend/yarn-error.log*
 # General
 .DS_Store
 *.log
+backend/logs/*.gz
+.gitignore

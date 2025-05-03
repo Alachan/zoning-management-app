@@ -25,7 +25,7 @@ public class ParcelCoordinatorService {
                 return Collections.emptyList();
             }
 
-            // Extract parcel IDs - convert from Integer to Long
+            // Extract parcel IDs
             List<Integer> parcelIds = parcelsGeoJSON.stream()
                     .map(p -> ((Integer) p[0]))
                     .collect(Collectors.toList());

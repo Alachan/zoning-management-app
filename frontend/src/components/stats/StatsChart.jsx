@@ -52,9 +52,7 @@ const StatsChart = ({ stats, title = "Zoning Distribution" }) => {
 
   return (
     <div className="w-full h-40 mt-2">
-      {" "}
       <h4 className="text-center text-xs font-medium text-gray-600 mb-1">
-        {" "}
         {title}
       </h4>
       <ResponsiveContainer width="100%" height="90%">

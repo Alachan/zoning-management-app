@@ -123,7 +123,7 @@ const App = () => {
             />
           </MapContainer>
 
-          {/* Floating Update Panel for Mobile - Now outside the MapContainer */}
+          {/* Floating Update Panel for Mobile */}
           <FloatingUpdatePanel
             selectedParcels={selectedParcels}
             selectedZoningType={selectedZoningType}

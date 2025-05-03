@@ -16,13 +16,8 @@ public class ParcelController {
 
     @GetMapping
     public ResponseEntity<List<ParcelDTO>> getAllParcels() {
-        try {
-            List<ParcelDTO> parcels = parcelCoordinatorService.getAllParcelsWithZoning();
-            return ResponseEntity.ok(parcels);
-        } catch (Exception e) {
-            // log the specific error details
-            throw new RuntimeException("Failed to retrieve parcels: " + e.getMessage(), e);
-        }
+        List<ParcelDTO> parcels = parcelCoordinatorService.getAllParcelsWithZoning();
+        return ResponseEntity.ok(parcels);
     }
 
     @PutMapping("/zoning")

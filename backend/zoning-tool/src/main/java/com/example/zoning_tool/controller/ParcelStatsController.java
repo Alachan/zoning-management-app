@@ -22,16 +22,12 @@ public class ParcelStatsController {
      */
     @PostMapping
     public ResponseEntity<ParcelStatsDTO> getParcelStats(@RequestBody List<Integer> parcelIds) {
-        try {
-            // Get all parcels with zoning
-            var allParcels = parcelCoordinatorService.getAllParcelsWithZoning();
-            // Calculate statistics
-            var stats = parcelStatsService.calculateStatsByIds(parcelIds, allParcels);
+        // Get all parcels with zoning
+        var allParcels = parcelCoordinatorService.getAllParcelsWithZoning();
+        // Calculate statistics
+        var stats = parcelStatsService.calculateStatsByIds(parcelIds, allParcels);
 
-            return ResponseEntity.ok(stats);
-        } catch (Exception e) {
-            throw new RuntimeException("Failed to get parcel statistics: " + e.getMessage(), e);
-        }
+        return ResponseEntity.ok(stats);
     }
 
     /**
@@ -41,16 +37,12 @@ public class ParcelStatsController {
     @PostMapping("/simulate")
     public ResponseEntity<ParcelStatsDTO> simulateZoningUpdate(
             @RequestBody ZoningUpdateRequest request) {
-        try {
-            // Get all parcels with zoning
-            var allParcels = parcelCoordinatorService.getAllParcelsWithZoning();
-            // Calculate statistics after update
-            var stats = parcelStatsService.calculateStatsAfterUpdate(request.getParcelIds(), allParcels,
-                    request.getZoningType());
+        // Get all parcels with zoning
+        var allParcels = parcelCoordinatorService.getAllParcelsWithZoning();
+        // Calculate statistics after update
+        var stats = parcelStatsService.calculateStatsAfterUpdate(request.getParcelIds(), allParcels,
+                request.getZoningType());
 
-            return ResponseEntity.ok(stats);
-        } catch (Exception e) {
-            throw new RuntimeException("Failed to simulate parcel statistics: " + e.getMessage(), e);
-        }
+        return ResponseEntity.ok(stats);
     }
 }

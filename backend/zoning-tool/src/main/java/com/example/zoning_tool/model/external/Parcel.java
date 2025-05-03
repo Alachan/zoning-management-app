@@ -22,6 +22,7 @@ public class Parcel {
 
     // Additional fields for hover info
     private String name;
+
     @Column(name = "mailadd")
     private String mailingAddress;
 }

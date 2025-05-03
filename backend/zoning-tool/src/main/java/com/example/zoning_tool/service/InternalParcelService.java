@@ -9,7 +9,6 @@ import com.example.zoning_tool.exception.ZoningUpdateException;
 import com.example.zoning_tool.model.app.ParcelZoning;
 import com.example.zoning_tool.model.app.ZoningType;
 import com.example.zoning_tool.repository.app.ParcelZoningRepository;
-
 import lombok.RequiredArgsConstructor;
 
 @Service

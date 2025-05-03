@@ -85,7 +85,6 @@ const StatsSidebar = ({ selectedParcels, selectedZoningType, isMobile }) => {
             <>
               {/* Basic stats */}
               <div className="grid grid-cols-1 gap-2">
-                {" "}
                 <StatItem
                   label="Selected Parcels"
                   value={selectedParcels.length}
@@ -118,9 +117,7 @@ const StatsSidebar = ({ selectedParcels, selectedZoningType, isMobile }) => {
               {/* Current zoning breakdown */}
               {currentStats && (
                 <div className="mt-2">
-                  {" "}
                   <h4 className="font-medium text-sm text-gray-700 mb-1">
-                    {" "}
                     Current Zoning
                   </h4>
                   {/* Chart */}
@@ -130,9 +127,7 @@ const StatsSidebar = ({ selectedParcels, selectedZoningType, isMobile }) => {
                   />
                   {/* Table view */}
                   <div className="bg-white shadow-sm rounded-lg mt-2">
-                    {" "}
                     <div className="px-2 py-1 border-b border-gray-100 text-xs text-gray-500 flex">
-                      {" "}
                       <span className="w-4"></span>
                       <span className="flex-1">Type</span>
                       <span className="w-12 text-right">Count</span>{" "}
@@ -173,9 +168,7 @@ const StatsSidebar = ({ selectedParcels, selectedZoningType, isMobile }) => {
               {/* Simulated zoning breakdown */}
               {simulatedStats && selectedZoningType && (
                 <div className="mt-2">
-                  {" "}
                   <h4 className="font-medium text-sm text-gray-700 mb-1">
-                    {" "}
                     After Update to {selectedZoningType}
                   </h4>
                   {/* Chart */}
@@ -185,13 +178,11 @@ const StatsSidebar = ({ selectedParcels, selectedZoningType, isMobile }) => {
                   />
                   {/* Change summary */}
                   <div className="mt-2 p-2 bg-yellow-50 border border-yellow-100 rounded-lg text-xs">
-                    {" "}
                     <h5 className="text-xs font-medium text-yellow-800 mb-1">
-                      {" "}
                       Changes Summary
                     </h5>
                     <p className="text-xs text-yellow-700">
-                      {selectedParcels.length} parcels will be changed to{" "}
+                      {selectedParcels.length} parcel(s) will be changed to{" "}
                       {selectedZoningType} zoning, affecting{" "}
                       {formatArea(currentStats ? currentStats.totalArea : 0)} of
                       land.

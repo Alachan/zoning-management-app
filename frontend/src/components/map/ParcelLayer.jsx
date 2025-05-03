@@ -242,7 +242,6 @@ const ParcelLayer = ({
               setHoveredParcel(null);
             },
           });
-          L.DomEvent.disableClickPropagation(layer);
         },
       }
     ).addTo(map);

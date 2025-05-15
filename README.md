@@ -4,12 +4,6 @@ A full-stack web application for managing zoning updates for real estate parcels
 
 View the project repository: [https://github.com/Alachan/zoning-management-app](https://github.com/Alachan/zoning-management-app)
 
-## Demo
-
-You can watch a demo of the application here:
-
-[![Zoning Tool Demo](https://img.youtube.com/vi/wgRBdqIHHmc/0.jpg)](https://www.youtube.com/watch?v=wgRBdqIHHmc)
-
 ## Features
 
 - Interactive map display with real estate parcels
